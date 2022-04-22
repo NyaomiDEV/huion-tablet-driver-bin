@@ -32,6 +32,12 @@ package() {
 	cp -r "$srcdir/huion/huiontablet" "$pkgdir/usr/lib/"
 	chmod 755 -R "$pkgdir/usr/lib/huiontablet"
 
+	# fix some app permissions (huion why not use /run/user/$UID/huiontablet/ for pids and logs?)
+	chmod 766 "$pkgdir/usr/lib/huiontablet/DriverUI.pid"
+	chmod 766 "$pkgdir/usr/lib/huiontablet/HuionCore.pid"
+	chmod 766 "$pkgdir/usr/lib/huiontablet/log.conf"
+	chmod 766 "$pkgdir/usr/lib/huiontablet/huion.log"
+
 	# udev rule
 	install -Dm644 "$srcdir/huion/huiontablet/res/rule/20-huion.rules" "$pkgdir/usr/lib/udev/rules.d/20-huion.rules"
 	
