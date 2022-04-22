@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = huion-tablet-driver-bin
+
+[Action]
+Description = Closing all previous instances of the Huion tablet driver...
+Exec = /usr/lib/huiontablet/close.sh
+When = PreTransaction
+
