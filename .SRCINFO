@@ -1,16 +1,19 @@
 pkgbase = huion-tablet-driver-bin
 	pkgdesc = Huion Tablet Driver Setting SoftWare
-	pkgver = 15.0.0.80
+	pkgver = 15.0.0.89
 	pkgrel = 1
 	url = https://www.huion.com/download/
 	arch = x86_64
 	license = custom:"Copyright (c) 2022 Huion"
 	depends = udev
 	provides = Huion
-	source = https://driverdl.huion.com/driver/Linux/HuionTablet_v15.0.0.80.202204090856.x86_64.tar.xz
+	provides = huiontablet
+	conflicts = Huion
+	conflicts = huiontablet
+	source = https://driverdl.huion.com/driver/Linux/HuionTablet_v15.0.0.89.202205241352.x86_64.tar.xz
 	source = close.sh
 	source = huion-tablet-driver-bin.hook
-	sha512sums = 935c194101242c56d78212acc23648c52a99c211697b61c3942a2acfbbeca9ec965777ce2d8e8e22410abc2a2c0c4dbc2d532a79581f2cd6a550440cabfec17d
+	sha512sums = b50f131042e2e11dc710eb18f35fc0ed0ce1ef138b461dc6d04bbb4124f13bfd939dbec8b7b27d96e071ccfddcc525d53a0fae83788ee41bc426e000d2c52fc2
 	sha512sums = a569b3e5bc8f4d0395f72ee9bb5e2aa9ff85ecfd25ce03334103fce766ffdb9234eae03c60cdebe5505aafb1f5a9c91a02712bfd3d4bb7ca982887ff15e8e0c6
 	sha512sums = a7b2eff37b7a26d9e455b33396107edd502f5352cc7bad23675703a28a035c27456312495ca24807976d4f4fd649233fff3caadee717688ec7cebbe5b7a7125c
 
